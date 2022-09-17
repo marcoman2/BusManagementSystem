@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="null" pageWidth="226" pageHeight="396" columnWidth="186" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="670ba869-3567-49b6-9701-92e54d1d3877">
+	<property name="ireport.zoom" value="2.853116706110003"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="391"/>
+	<parameter name="busD" class="java.lang.String">
+		<defaultValueExpression><![CDATA[]]></defaultValueExpression>
+	</parameter>
+	<queryString>
+		<![CDATA[SELECT
+     customer.`id` AS customer_id,
+     customer.`customer_id` AS customer_customer_id,
+     customer.`firstName` AS customer_firstName,
+     customer.`lastName` AS customer_lastName,
+     customer.`gender` AS customer_gender,
+     customer.`phoneNumber` AS customer_phoneNumber,
+     customer.`bus_id` AS customer_bus_id,
+     customer.`location` AS customer_location,
+     customer.`type` AS customer_type,
+     customer.`seatNum` AS customer_seatNum,
+     customer.`total` AS customer_total,
+     customer.`date` AS customer_date,
+     customer_receipt.`id` AS customer_receipt_id,
+     customer_receipt.`customer_id` AS customer_receipt_customer_id,
+     customer_receipt.`total` AS customer_receipt_total,
+     customer_receipt.`date` AS customer_receipt_date
+FROM
+     `customer` customer INNER JOIN `customer_receipt` customer_receipt ON customer.`customer_id` = customer_receipt.`customer_id` WHERE customer_receipt.`customer_id` = $P{busD}]]>
+	</queryString>
+	<field name="customer_id" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="customer_customer_id" class="java.lang.Integer"/>
+	<field name="customer_firstName" class="java.lang.String"/>
+	<field name="customer_lastName" class="java.lang.String"/>
+	<field name="customer_gender" class="java.lang.String"/>
+	<field name="customer_phoneNumber" class="java.lang.String"/>
+	<field name="customer_bus_id" class="java.lang.Integer"/>
+	<field name="customer_location" class="java.lang.String"/>
+	<field name="customer_type" class="java.lang.String"/>
+	<field name="customer_seatNum" class="java.lang.Integer"/>
+	<field name="customer_total" class="java.lang.Double"/>
+	<field name="customer_date" class="java.sql.Date"/>
+	<field name="customer_receipt_id" class="java.lang.Integer"/>
+	<field name="customer_receipt_customer_id" class="java.lang.Integer"/>
+	<field name="customer_receipt_total" class="java.lang.Double"/>
+	<field name="customer_receipt_date" class="java.sql.Date"/>
+	<group name="bus Data">
+		<groupExpression><![CDATA[$F{customer_id}]]></groupExpression>
+		<groupFooter>
+			<band height="50">
+				<staticText>
+					<reportElement x="73" y="13" width="59" height="20" uuid="5056f1f5-5ba3-4a32-944e-0d7d45e3e71f"/>
+					<textElement>
+						<font size="8"/>
+					</textElement>
+					<text><![CDATA[Total Payment $]]></text>
+				</staticText>
+				<textField>
+					<reportElement x="132" y="13" width="48" height="20" uuid="4da13b43-0e7c-43d1-8df4-49d2ff6dc4d3"/>
+					<textElement>
+						<font size="9"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{customer_receipt_total}]]></textFieldExpression>
+				</textField>
+			</band>
+		</groupFooter>
+	</group>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="79" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="27" width="186" height="32" uuid="8e781638-bf61-4e27-8eba-bd4a3e1f5b25"/>
+				<textElement textAlignment="Center">
+					<font fontName="Comic Sans MS" size="20" isBold="false"/>
+				</textElement>
+				<text><![CDATA[MarcoMan's Bus]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="114" y="0" width="30" height="15" uuid="a6896880-a719-4ac6-ae3c-6c9e2496bc1d"/>
+				<textElement>
+					<font size="8"/>
+				</textElement>
+				<text><![CDATA[Ticket #]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="144" y="0" width="36" height="20" uuid="1cd33b07-130f-44ec-88f9-9117819b2abb"/>
+				<textElement>
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{customer_customer_id}]]></textFieldExpression>
+			</textField>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="22" splitType="Stretch">
+			<staticText>
+				<reportElement x="10" y="0" width="37" height="14" uuid="d0d8b962-6bb4-48ce-8446-c43dc80473e1"/>
+				<textElement textAlignment="Center">
+					<font size="7"/>
+				</textElement>
+				<text><![CDATA[Bus ID]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="47" y="0" width="37" height="14" uuid="b9184fa9-529a-4f19-93dd-4cde82c53fc7"/>
+				<textElement textAlignment="Center">
+					<font size="7"/>
+				</textElement>
+				<text><![CDATA[Seat #]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="132" y="0" width="44" height="14" uuid="f3c3f752-430e-4ea6-8f2a-eed464452a09"/>
+				<textElement textAlignment="Center">
+					<font size="7"/>
+				</textElement>
+				<text><![CDATA[Location]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="84" y="0" width="48" height="14" uuid="2416f377-0f91-4522-8568-60dc08c235f3"/>
+				<textElement textAlignment="Center">
+					<font size="7"/>
+				</textElement>
+				<text><![CDATA[Type]]></text>
+			</staticText>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band height="35" splitType="Stretch">
+			<textField>
+				<reportElement x="10" y="0" width="37" height="20" uuid="39510830-b298-4ba5-8aaa-2e35d242873f"/>
+				<textElement textAlignment="Center">
+					<font size="6"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{customer_bus_id}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="47" y="0" width="37" height="20" uuid="18ff5afc-3834-4282-8e6e-8a3ec1f47514"/>
+				<textElement textAlignment="Center">
+					<font size="6"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{customer_seatNum}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="84" y="0" width="48" height="20" uuid="b88e3f48-1cb9-47df-a24a-3eb2d67226d8"/>
+				<textElement textAlignment="Center">
+					<font size="6"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{customer_type}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="132" y="0" width="44" height="20" uuid="767cb8c1-2cd7-4ffd-8139-ab4ba5964469"/>
+				<textElement textAlignment="Center">
+					<font size="6"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{customer_location}]]></textFieldExpression>
+			</textField>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="46" splitType="Stretch"/>
+	</detail>
+	<columnFooter>
+		<band height="45" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="54" splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band height="42" splitType="Stretch"/>
+	</summary>
+</jasperReport>

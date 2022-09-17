@@ -1,0 +1,53 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 09 6, 22, 7:45:14 PM
+    Author     : WINDOWS 10
+*/
+
+.left-form{
+    -fx-background-color:linear-gradient(to bottom right, #753036, #3c8256);
+    -fx-border-color:#000;
+    -fx-border-width:.4px 0px .4px .4px;
+}
+
+.right-form{
+    -fx-background-color:#fff;
+    -fx-border-color:#000;
+    -fx-border-width:.4px .4px .4px 0px;
+}
+
+.close{
+    -fx-background-color:transparent;
+    -fx-cursor:hand;
+}
+.close:hover{
+    -fx-background-color:#dd4763;
+}
+
+.textfield{
+    -fx-background-color:transparent;
+    -fx-border-color:#000;
+    -fx-border-width:0px 0px .8px 0px;
+    -fx-font-size:13px;
+    -fx-font-family:"Tahoma";
+}
+.textfield:focused{
+    -fx-border-color:linear-gradient(to bottom right, #753036, #3c8256);
+    -fx-border-width:0px 0px 1.8px 0px;
+}
+
+.login-btn{
+    -fx-background-color:linear-gradient(to bottom, #4ca495, #3c755d);
+    -fx-background-radius:8px;
+    -fx-font-size:14px;
+    -fx-text-fill:#fff;
+    -fx-font-family:"Arial";
+    -fx-cursor:hand;
+}
+.login-btn:hover{
+    -fx-background-color:linear-gradient(to bottom, #62bba9, #539679);
+}

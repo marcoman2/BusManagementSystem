@@ -1,0 +1,264 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 09 6, 22, 8:21:32 PM
+    Author     : WINDOWS 10
+*/
+
+.top-form{
+    -fx-background-color:#fff;
+    -fx-border-color:#000;
+    -fx-border-width:.4px .4px .2px .4px;
+}
+
+.semi-top-form{
+    -fx-background-color:#efefef;
+    -fx-border-color:#000;
+    -fx-border-width:0px .4px .8px .4px;
+}
+
+.close{
+    -fx-background-color:transparent;
+    -fx-cursor:hand;
+}
+.close:hover{
+    -fx-background-color:#dd4763;
+}
+
+.minimize{
+    -fx-background-color:transparent;
+    -fx-cursor:hand;
+}
+.minimize:hover{
+    -fx-background-color:#ddd;
+}
+
+.nav-form{
+    -fx-background-color:linear-gradient(to bottom right, #753036, #3c8256);
+}
+
+.nav-btn{
+    -fx-background-color:transparent;
+    -fx-text-fill:#fff;
+    -fx-font-size:15px;
+    -fx-cursor:hand;
+    -fx-font-family:"Arial";
+    -fx-alignment: CENTER_LEFT;
+}
+
+.logout-btn{
+    -fx-background-color:#5074d6;
+    -fx-background-radius:50px;
+    -fx-cursor:hand;
+    -fx-effect:dropshadow(three-pass-box, rgba(0,0,0,0.4), 2,0,0,0);
+}
+.logout-btn:hover{
+    -fx-background-color:#5e87ee;
+}
+
+.white-bg{
+    -fx-background-color:#fff;
+    -fx-background-radius:5px;
+}
+
+.shadow{
+    -fx-effect:dropshadow(three-pass-box, rgba(0,0,0,0.4), 5,0,0,0);
+}
+
+.card1{
+    -fx-background-color:linear-gradient(to right, #6b2f39, #a34747);
+    -fx-background-radius:8px;
+}
+
+.card2{
+    -fx-background-color:linear-gradient(to right, #324a72, #4667a0);
+    -fx-background-radius:8px;
+}
+.card3{
+    -fx-background-color:linear-gradient(to right, #7c3a70, #a15794);
+    -fx-background-radius:8px;
+} 
+
+.textfield{
+    -fx-background-color:transparent;
+    -fx-border-color:#000;
+    -fx-font-family:"Tahoma";
+    -fx-font-size:13px;
+    -fx-border-radius:10px 5px 10px 5px;
+    -fx-border-width:.8px;
+}
+.textfield:focused{
+    -fx-border-color:linear-gradient(to bottom right, #753036, #3c8256);
+    -fx-border-width:1.8px;
+}
+
+.combobox{
+    -fx-background-color:transparent;
+    -fx-border-color:#000;
+    -fx-font-family:"Tahoma";
+    -fx-font-size:13px;
+    -fx-border-radius:10px 5px 10px 5px;
+    -fx-border-width:.8px;
+}
+.combobox:focused{
+    -fx-border-color:linear-gradient(to bottom right, #753036, #3c8256);
+    -fx-border-width:1.8px;
+}
+
+.date{
+    -fx-background-color:transparent;
+    -fx-border-color:#000;
+    -fx-font-family:"Tahoma";
+    -fx-font-size:13px;
+    -fx-border-width:.8px;
+}
+.date:focused{
+    -fx-border-color:linear-gradient(to bottom right, #753036, #3c8256);
+    -fx-border-width:1.8px;
+}
+
+.add-btn{
+    -fx-background-color:#446093;
+    -fx-background-radius:8px;
+    -fx-cursor:hand;
+    -fx-text-fill:#fff;
+    -fx-font-size:14px;
+    -fx-font-family:"Arial";
+}
+.add-btn:hover{
+    -fx-background-color:#5981c5;
+}
+
+.update-btn{
+    -fx-background-color:#42877a;
+    -fx-background-radius:8px;
+    -fx-cursor:hand;
+    -fx-text-fill:#fff;
+    -fx-font-size:14px;
+    -fx-font-family:"Arial";
+}
+.update-btn:hover{
+    -fx-background-color:#65bbaa;
+}
+
+.reset-btn{
+    -fx-background-color:#774689;
+    -fx-background-radius:8px;
+    -fx-cursor:hand;
+    -fx-text-fill:#fff;
+    -fx-font-size:14px;
+    -fx-font-family:"Arial";
+}
+.reset-btn:hover{
+    -fx-background-color:#9d61b5;
+}
+
+.delete-btn{
+    -fx-background-color:#864251;
+    -fx-background-radius:8px;
+    -fx-cursor:hand;
+    -fx-text-fill:#fff;
+    -fx-font-size:14px;
+    -fx-font-family:"Arial";
+}
+.delete-btn:hover{
+    -fx-background-color:#c95f6f;
+}
+
+.search{
+    -fx-background-color:transparent;
+    -fx-border-color:#000;
+    -fx-font-family:"Tahoma";
+    -fx-font-size:13px;
+    -fx-border-radius:10px 5px 10px 5px;
+    -fx-border-width:.8px;
+    -fx-padding:0px 0px 0px 28px;
+}
+.search:focused{
+    -fx-border-color:linear-gradient(to bottom right, #753036, #3c8256);
+    -fx-border-width:1.8px;
+}
+
+.table-view{
+    -fx-border-color:linear-gradient(to bottom right, #753036, #3c8256);
+    -fx-padding:0px;
+    -fx-border-radius:8px;
+    -fx-border-width:2px;
+}
+
+.table-view .table-column{
+    -fx-alignment: CENTER;
+}
+
+.table-view .column-header-background{
+    -fx-background-color:linear-gradient(to bottom right, #753036, #3c8256);
+    -fx-background-insets: 0 0 0 0;
+}
+.table-view .column-header, .filter{
+    -fx-background-color:transparent;
+    -fx-size:50px;
+}
+.table-view .column-header .label{
+    -fx-text-fill:#fff;
+}
+
+.info-card{
+    -fx-background-color:linear-gradient(to bottom right, #57252a, #29643f);
+    -fx-background-radius:0px 5px 5px 0px;
+}
+
+.io-textfield{
+    -fx-background-color:#fff;
+    -fx-background-radius:5px;
+    -fx-font-family:"Tahoma";
+    -fx-font-size:13px;
+}
+
+.select-btn{
+    -fx-background-color:#3e89bb;
+    -fx-background-radius:10px 5px 10px 5px;
+    -fx-cursor:hand;
+    -fx-font-size:14px;
+    -fx-font-family:"Arial";
+    -fx-text-fill: #fff;
+}
+.select-btn:hover{
+    -fx-background-color:#399ad6;
+}
+
+.io-reset-btn{
+    -fx-background-color:#933eb5;
+    -fx-background-radius:10px 5px 10px 5px;
+    -fx-cursor:hand;
+    -fx-font-size:14px;
+    -fx-font-family:"Arial";
+    -fx-text-fill: #fff;
+}
+.io-reset-btn:hover{
+    -fx-background-color:#8a34d1;
+}
+
+.label-info{
+    -fx-border-color:linear-gradient(to bottom right, #753036, #3c8256);
+    -fx-border-radius:15px 5px 15px 5px;
+    -fx-font-size:14px;
+    -fx-font-family:"Tahoma";
+    -fx-border-width:2px;
+    -fx-padding:0px 0px 0px 10px;
+}
+
+.receipt-btn{
+    -fx-background-color:#a7753f;
+    -fx-background-radius:10px 5px 10px 5px;
+    -fx-cursor:hand;
+    -fx-font-size:14px;
+    -fx-font-family:"Arial";
+    -fx-text-fill: #fff;
+}
+.receipt-btn:hover{
+    -fx-background-color:#bf7f3a;
+}
+/* LETS GIVE THEM NAMES EACH COMPONENTS*/
